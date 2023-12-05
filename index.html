@@ -10,6 +10,9 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notiflix@3.2.6/dist/notiflix-3.2.6.min.css"
         integrity="sha256-quZ4+TPWUyQzuPnahKf6d8Xal6tZcYZTzSt4wFVEFn8=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ladda-bootstrap/0.9.4/ladda.min.css"
+        integrity="sha512-zB1n/jwQD1XiJf3rDBfZVm5xqngjw1C48MYyJ8XOd/7OLvDbjUmY9+gGyeJORcYXSv3qFOZ3VdHAoullPFHIYA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         .gradient-custom-2 {
             /* fallback for old browsers */
@@ -37,149 +40,101 @@
 
 <body>
     <div class="h-200 gradient-form" style="background-color: #eee;">
-        <h1 style="text-align:center;color:purple">Welcome My Website</h1>
-        <br />
-        <section class="h-80 gradient-form" style="background-color: #eee; display: none;">
-            <div class="container py-5 h-100">
-                <div class="row d-flex justify-content-center align-items-center h-100">
-                    <div class="col-xl-10">
+
+        <section class="vh-80 " style="background-color: #eee; ">
+
+            <div class="container py-2 h-50">
+                <div class="row d-flex align-items-left h-40">
+                    <div class="col-xl-22">
                         <div class="card rounded-3 text-black">
                             <div class="row g-0">
-                                <div class="col-lg-6">
+
+                                <div class="col-lg-4">
                                     <div class="card-body p-md-5 mx-md-4">
 
                                         <div class="text-center">
                                             <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
                                                 style="width: 185px;" alt="logo">
-                                            <h4 class="mt-1 mb-5 pb-1">Welcome My Website</h4>
+                                            <!-- <h4 class="mt-1 mb-5 pb-1">Welcome My Website</h4> -->
                                         </div>
 
                                         <form>
-                                            <p>Please login to your account</p>
-
+                                            <h3 style="text-align:center;color:purple">Create Blog</h3>
+                                            <br>
                                             <div class="form-outline mb-4">
-                                                <input type="email" id="loginName" class="form-control"
-                                                    placeholder="Phone number or email address" />
-                                                <label class="form-label" for="loginName">Username</label>
+                                                <input type="text" id="txtBlogTitle" class="form-control"
+                                                    placeholder="" />
+                                                <label class="form-label" for="txtBlogContent">Blog Title</label>
                                             </div>
 
                                             <div class="form-outline mb-4">
-                                                <input type="password" id="loginPassword" class="form-control" />
-                                                <label class="form-label" for="loginPassword">Password</label>
+                                                <input type="text" id="txtBlogContent" class="form-control" />
+                                                <label class="form-label" for="txtBlogContent">Blog Content</label>
+                                            </div>
+                                            <div class="form-outline mb-4">
+                                                <input type="text" id="txtBlogAuthor" class="form-control" />
+                                                <label class="form-label" for="txtBlogAuthor">Blog Author</label>
+                                            </div>
+
+                                            <div class="pt-1 mb-2 pb-1">
+                                                Blog Type:
+                                                <input type="checkbox" id="someCheckboxId2" name="txtType" value="R" />
+                                                <label for="someCheckboxId2">Romantic</label>
+                                                <input type="checkbox" id="someCheckboxId2" name="txtType" value="H" />
+                                                <label for="someCheckboxId2">Haha</label><br>
+                                                <input type="checkbox" style="margin-left: 77px;" id="someCheckboxId2"
+                                                    name="txtType" value="D" />
+                                                <label for="someCheckboxId2">Drama</label>
+                                                <input type="checkbox" id="someCheckboxId2" name="txtType" value="F" />
+                                                <label for="someCheckboxId2">Fiction</label><br>
                                             </div>
 
                                             <div class="text-center pt-1 mb-5 pb-1">
-                                                <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3"
+                                                <button
+                                                    class="btn btn-primary ladda-button btn-block fa-lg gradient-custom-2 mb-3"
+                                                    data-style="expand-left" id="btnSave" type="button">
+                                                    Save
+                                                </button>
+                                                <button type="reset"
+                                                    class="btn btn-primary ladda-button btn-block fa-lg gradient-custom-2 mb-3"
                                                     type="button">
-                                                    Login
+                                                    Cancel
                                                 </button>
                                                 <!--<a class="text-muted" href="#!">Forgot password?</a>-->
                                             </div>
 
-                                            <div class="d-flex align-items-center justify-content-center pb-4">
-                                                <p class="mb-0 me-2">Don't have an account?</p>
-                                                <button type="button" class="btn btn-outline-danger">Create new</button>
-                                            </div>
-
                                         </form>
 
                                     </div>
                                 </div>
-                                <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
-                                    <div class="text-white px-3 py-4 p-md-5 mx-md-4">
-                                        <h4 class="mb-4">We are more than just a company</h4>
-                                        <p class="small mb-0">
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                            quis nostrud
-                                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                        </p>
+                                <div class="col-lg-8">
+                                    <div class=" p-md-8 mx-md-18">
+                                        <table class="table mt-4">
+                                            <thead>
+                                                <tr>
+
+                                                    <th scope="col">No.</th>
+                                                    <th scope="col">Blog Title</th>
+                                                    <th scope="col">Blog Content</th>
+                                                    <th scope="col">Blog Author</th>
+                                                    <th scope="col">Blog Type</th>
+                                                    <th style="width: 150px;"> Action </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="tbodyTest"></tbody>
+                                        </table>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <section class="vh-80" style="background-color: #eee; ">
-            <div class="container h-100">
-                <div class="row d-flex justify-content-center align-items-center h-100">
-                    <div class="col-lg-12 col-xl-11">
-                        <div class="card text-black" style="border-radius: 25px;">
-                            <div class="card-body p-md-5">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+    </div>
+    </section>
 
-                                        <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
 
-                                        <form class="mx-1 mx-md-4">
-
-                                            <div class="d-flex flex-row align-items-center mb-4">
-                                                <i class="fas fa-user fa-lg me-3 fa-fw"></i>
-                                                <div class="form-outline flex-fill mb-0">
-                                                    <input type="text" id="txtName" class="form-control" />
-                                                    <label class="form-label" for="txtName">Your Name</label>
-                                                </div>
-                                            </div>
-
-                                            <div class="d-flex flex-row align-items-center mb-4">
-                                                <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
-                                                <div class="form-outline flex-fill mb-0">
-                                                    <input type="email" id="txtEmail" class="form-control" />
-                                                    <label class="form-label" for="txtEmail">Your Email</label>
-                                                </div>
-                                            </div>
-
-                                            <div class="d-flex flex-row align-items-center mb-4">
-                                                <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
-                                                <div class="form-outline flex-fill mb-0">
-                                                    <input type="password" id="txtPassword" class="form-control" />
-                                                    <label class="form-label" for="txtPassword">Password</label>
-                                                </div>
-                                            </div>
-
-                                            <div class="d-flex flex-row align-items-center mb-4">
-                                                <i class="fas fa-key fa-lg me-3 fa-fw"></i>
-                                                <div class="form-outline flex-fill mb-0">
-                                                    <input type="password" id="txtPassword1" class="form-control" />
-                                                    <label class="form-label" for="txtPassword1">Repeat your
-                                                        password</label>
-                                                </div>
-                                            </div>
-
-                                            <div class="form-check d-flex justify-content-center mb-5">
-                                                <input class="form-check-input me-2" type="checkbox" value=""
-                                                    id="agree" />
-                                                <label class="form-check-label" for="agree">
-                                                    I agree all statements in <a href="#!">Terms of service</a>
-                                                </label>
-                                            </div>
-
-                                            <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                                                <button type="button" class="btn btn-primary btn-lg"
-                                                    id="btnSave">Register</button>
-                                                <a class="btn btn-primary btn-lg" href="view_user.html">View
-                                                    User</a>
-                                            </div>
-
-                                        </form>
-
-                                    </div>
-                                    <div
-                                        class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
-
-                                        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
-                                            class="img-fluid" alt="Sample image">
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
     </div>
 </body>
 
@@ -195,6 +150,16 @@
 
 <script src="https://cdn.jsdelivr.net/npm/notiflix@3.2.6/dist/notiflix-aio-3.2.6.min.js"
     integrity="sha256-pXMqYvjzxYjuQ3+Iz0Zpw3Tk3BAoet8dOsODol/iqTI=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ladda-bootstrap/0.9.4/spin.min.js"
+    integrity="sha512-qByKQKO3eTwzJtP8Y395YbP45QyYZNpJfYu8jfFpWgFTK2xWIiOER7G+63EoXk475fBFzY6HIhbEUio6m72EaQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ladda-bootstrap/0.9.4/ladda.min.js"
+    integrity="sha512-OxowQ96EheBKRxTivGsizVvTK8bWt2xZlymiMZ9MArbmOmuxbv+2IlC46k4gZPhZH5eVQAm0F6lk9Yt6M4xu7A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 <script>
     Notiflix.Notify.init({
         width: '280px',
@@ -263,69 +228,195 @@
     });
 
     var editId = "";
-    $("#txtName").focus();
+    $("#txtBlogTitle").focus();
     loadTable();
+    $('#btnSave').click(function (e) {
+        e.preventDefault();
+        var l = Ladda.create(this);
+        l.start();
 
-    $("#btnSave").click(function () {
-        var txtName = $("#txtName").val();
-        var txtEmail = $("#txtEmail").val();
-        var txtPassword = $("#txtPassword").val();
+        setTimeout(() => {
+            l.stop();
+        }, 1000);
+    })
+    $("#btnSave").click(function (e) {
+        var txtBlogTitle = $("#txtBlogTitle").val();
+        var txtBlogContent = $("#txtBlogContent").val();
+        var txtBlogAuthor = $("#txtBlogAuthor").val();
 
         var lst = getData();
 
-        const testObj = {
-            Id: uuidv4(),
-            Name: txtName,
-            Email: txtEmail,
-            Password: txtPassword
-        };
 
+        let inputTitle = $('#txtBlogTitle').val();
 
-        let input = $('#txtName').val();
+        if (inputTitle === null || inputTitle === undefined || inputTitle === '') {
 
-        if (input === null || input === undefined || input === '' || input === ' ') {
-
-            Notiflix.Notify.warning('Please enter text', {
+            Notiflix.Notify.warning('Please Enter Blog Title', {
                 position: 'center-top',
                 transitionOut: 'fadeOutUp'
             });
-            $("#txtName").focus();
+            $("#txtBlogTitle").focus();
             return;
         }
+        let inputContent = $('#txtBlogContent').val();
+
+        if (inputContent === null || inputContent === undefined || inputContent === '') {
+
+            Notiflix.Notify.warning('Please Enter Blog Content', {
+                position: 'center-top',
+                transitionOut: 'fadeOutUp'
+            });
+            $("#txtBlogContent").focus();
+            return;
+        }
+        let inputAuthor = $('#txtBlogAuthor').val();
+
+        if (inputAuthor === null || inputAuthor === undefined || inputAuthor === '') {
+
+            Notiflix.Notify.warning('Please Enter Blog Content', {
+                position: 'center-top',
+                transitionOut: 'fadeOutUp'
+            });
+            $("#txtBlogAuthor").focus();
+            return;
+        }
+
+        var BlogType = [];
+        $("input[name='txtType']:checked").each(function () {
+            BlogType.push($(this).val());
+        });
+        BlogType = BlogType.join(",");
+
+        if (BlogType.length < 0) {
+            Notiflix.Notify.warning('Please Select at least one Type', {
+                position: 'center-top',
+                transitionOut: 'fadeOutUp'
+            });
+            return;
+        }
+
+
+
+        e.preventDefault();
+        var l = Ladda.create(this);
+        l.start();
+        const testObj = {
+            Id: uuidv4(),
+            BlogTitle: txtBlogTitle,
+            BlogContent: txtBlogContent,
+            BlogAuthor: txtBlogAuthor,
+            BlogType: BlogType
+        };
 
         setTimeout(() => {
             lst.push(testObj);
             localStorage.setItem("Tbl_Test", JSON.stringify(lst));
             clear();
-            $("#txtName").focus();
-
+            $("#txtBlogTitle").focus();
+            l.stop();
             successMsg("Saving Successful.");
             loadTable();
         }, 2000);
 
     });
 
-    function loadTable() {
-        $("#tbodyTest").empty();
+    function Edit(ele) {
 
+        let id = $(ele).data("id");
 
         var lst = getData();
 
+        const result = lst.filter(function (x) {
+            return x.Id == id;
+        });
+
+        var item = result[0];
+        $("#txtBlogTitle").val(item.BlogTitle);
+        $("#txtBlogContent").val(item.BlogContent);
+        $("#txtBlogAuthor").val(item.BlogAuthor);
+        $("input[name='txtType']").prop('checked', false);
+        var blogType = item.BlogType.split(',');
+        blogType.forEach(function (BlogType) {
+            $("input[name='txtType'][value='" + BlogType + "']").prop('checked', true);
+        });
+
+        editId = item.Id;
+    }
+
+    $("#btnUpdate").click(function () {
+        if (editId === "") return;
+
+        let inputTitle = $('#txtBlogTitle').val();
+        let inputAuthor = $('#txtBlogAuthor').val();
+        let inputContent = $('#txtBlogContent').val();
+        if (inputTitle === null || inputTitle === undefined || inputTitle === '' ||
+            inputAuthor === null || inputAuthor === undefined || inputAuthor === '' ||
+            inputContent === null || inputContent === undefined || inputContent === '') {
+            Notiflix.Notify.warning('Please Enter All Fields', {
+                position: 'center-top',
+                transitionOut: 'fadeOutUp'
+            });
+            return;
+        }
+        confirmMsg("Are you sure want to Update?").then((result) => {
+            console.log(result);
+            if (!result) return;
+            var lst = getData();
+            let index = lst.findIndex((x) => x.Id == editId);
+            // let index = lst.map(e => e.Id).indexOf(id);
+            console.log(`index ${index}`);
+
+            lst[index].BlogTitle = $("#txtBlogTitle").val();
+            lst[index].BlogAuthor = $("#txtBlogAuthor").val();
+            lst[index].BlogContent = $("#txtBlogContent").val();
+
+            editId = "";
+            setLocal(lst);
+            clear();
+            loadTable();
+            successMsg("Update Successful.");
+
+            var interval1 = setInterval(() => {
+                $("#txtBlogTitle").focus();
+            }, 2000);
+        });
+    });
+
+    function Delete(ele) {
+
+        confirmMsg("Are you sure want to delete?").then((result) => {
+            console.log(result);
+            if (!result) return;
+            let id = $(ele).data("id");
+            var lst = getData();
+            let index = lst.findIndex((x) => x.Id == id);
+            lst.splice(index, 1);
+
+            setLocal(lst);
+            loadTable();
+            successMsg("Deleting Successful.");
+        });
+    }
+
+    function loadTable() {
+        $("#tbodyTest").empty();
+        var lst = getData();
+
         $.each(lst, function (key, value) {
-            console.log(key + ": " + value.Id + "," + value.Name);
             let htmlRow = `
                       <tr>
-                          <td>
+                          
+                          <td>${key + 1}</td>
+                          <td>${value.BlogTitle}</td>
+                          <td>${value.BlogContent}</td>
+                          <td>${value.BlogAuthor}</td>
+                          <td>${value.BlogType}</td>
+                        <td>
                               <button type="button" class="btn btn-warning" onclick="Edit(this)" data-id="${value.Id
                 }">Edit</button>
                               <button type="button" class="btn btn-danger" onclick="Delete(this)" data-id="${value.Id
                 }">Delete</button>
                               </td>
-                          <td>${key + 1}</td>
-                          <td>${value.Name}</td>
-                          <td>${value.Email}</td>
-                          <td>${value.Password}</td>
-
                       </tr>
                                       `;
             $("#tbodyTest").append(htmlRow);
@@ -355,10 +446,12 @@
         localStorage.setItem("Tbl_Test", JSON.stringify(lst));
     }
     function clear() {
-        $("#txtName").val("");
-        $("#txtEmail").val("");
-        $("#txtPassword").val("");
-        $("#txtPassword1").val("");
+        $("#txtBlogTitle").val("");
+        $("#txtBlogAuthor").val("");
+        $("#txtBlogContent").val("");
+        $("#someCheckboxId2").prop('checked', false);
+        $("#txtBlogTitle").focus();
+
     }
     function successMsg(message) {
 
